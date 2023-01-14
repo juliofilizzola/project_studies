@@ -42,6 +42,7 @@ custom:
 functions:
   register:
     role: ${ssm:${self:custom.stage}-register-iam-role}
+    description: 'Função de registro de usuario'
     handler: register/handler.register
     events:
       - http:

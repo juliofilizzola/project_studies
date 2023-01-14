@@ -1,0 +1,18 @@
+{
+  "name": "api",
+  "version": "0.0.1",
+  "description": "Api create user",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "uuid": "^9.0.0"
+  },
+  "devDependencies": {
+    "aws-sdk": "^2.1295.0"
+  }
+}
