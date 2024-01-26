@@ -4,7 +4,7 @@
       {
         "Action": ["${action}"],
         "Effect": "Allow",
-         "Resource": "${resource}"
+        "Resource": "${resource}"
       },
       {
         "Effect": "Allow",

@@ -4,11 +4,12 @@ const uuid = require('uuid');
 const bcrypt = require('bcryptjs');
 const AWS = require('aws-sdk');
 AWS.config.update({
-  region: process.env.AWS_REGION
+  region: 'us-east-1'
 });
 const dbClient = new AWS.DynamoDB.DocumentClient();
 
 module.exports.register = async (event) => {
+  console.log(event);
   const body = JSON.parse(event.body);
   await dbClient.put({
     TableName: process.env.DYNAMODB_USERS,

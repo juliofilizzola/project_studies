@@ -12,7 +12,7 @@ resource "aws_dynamodb_table" "users" {
   }
 
   global_secondary_index {
-    name = "${var.environment}-email.gsi"
+    name = "${var.environment}-email-gsi"
     projection_type = "ALL"
     hash_key = "email"
     write_capacity = "${var.write_capacity}"
@@ -25,7 +25,7 @@ resource "aws_dynamodb_table" "users" {
 }
 
 resource "aws_ssm_parameter" "email-gsi" {
-  name = "${var.environment}-email.gsi"
+  name = "${var.environment}-email-gsi"
   type = "String"
-  value = "${var.environment}-email.gsi"
+  value = "${var.environment}-email-gsi"
 }
